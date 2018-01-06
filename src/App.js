@@ -100,7 +100,7 @@ class App extends Component {
             })
 
     let updatedRecommendation = [...this.state.recommendations];
-    updatedRecommendation.push(this.state.recommendations[i]);
+    updatedRecommendation.push(this.state.myList[i]);
     this.setState({
                       recommendations : updatedRecommendation
                   })
@@ -109,7 +109,7 @@ class App extends Component {
         if(data === 'Add'){
 
             let updatedMyList = [...this.state.myList];
-            updatedMyList.push(this.state.myList[i]);
+            updatedMyList.push(this.state.recommendations[i]);
             this.setState({
                 myList : updatedMyList
             });
